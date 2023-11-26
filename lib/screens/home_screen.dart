@@ -115,39 +115,43 @@ class HomeScreen extends StatelessWidget {
                             vertical: 15, horizontal: 20),
                         itemBuilder: (context, index) {
                           var movie = snapshot.data![index];
-                          return Column(
-                            children: [
-                              Container(
-                                width: 150,
-                                height: 150,
-                                clipBehavior: Clip.hardEdge,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Image.network(
-                                  "https://image.tmdb.org/t/p/w500/${movie.thumb}",
-                                  fit: BoxFit.cover,
-                                  /* headers: const {
-                                  "User-Agent":
-                                      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-                                }, */
-                                ),
-                              ),
-                              Container(
-                                height: 75,
-                                width: 150,
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 10),
-                                child: Text(
-                                  movie.title,
-                                  style: const TextStyle(
-                                    fontSize: 16,
+                          return GestureDetector(
+                            onTap: () =>
+                                _onGoto(movie.id, movie.title, movie.thumb),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 150,
+                                  height: 150,
+                                  clipBehavior: Clip.hardEdge,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
+                                  child: Image.network(
+                                    "https://image.tmdb.org/t/p/w500/${movie.thumb}",
+                                    fit: BoxFit.cover,
+                                    /* headers: const {
+                                    "User-Agent":
+                                        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+                                  }, */
+                                  ),
                                 ),
-                              )
-                            ],
+                                Container(
+                                  height: 75,
+                                  width: 150,
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 10),
+                                  child: Text(
+                                    movie.title,
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                    maxLines: 3,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                )
+                              ],
+                            ),
                           );
                         },
                         separatorBuilder: (context, index) =>
@@ -186,39 +190,43 @@ class HomeScreen extends StatelessWidget {
                             vertical: 15, horizontal: 20),
                         itemBuilder: (context, index) {
                           var movie = snapshot.data![index];
-                          return Column(
-                            children: [
-                              Container(
-                                width: 150,
-                                height: 150,
-                                clipBehavior: Clip.hardEdge,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Image.network(
-                                  "https://image.tmdb.org/t/p/w500/${movie.thumb}",
-                                  fit: BoxFit.cover,
-                                  /* headers: const {
-                                  "User-Agent":
-                                      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-                                }, */
-                                ),
-                              ),
-                              Container(
-                                height: 75,
-                                width: 150,
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 10),
-                                child: Text(
-                                  movie.title,
-                                  style: const TextStyle(
-                                    fontSize: 16,
+                          return GestureDetector(
+                            onTap: () =>
+                                _onGoto(movie.id, movie.title, movie.thumb),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 150,
+                                  height: 150,
+                                  clipBehavior: Clip.hardEdge,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
+                                  child: Image.network(
+                                    "https://image.tmdb.org/t/p/w500/${movie.thumb}",
+                                    fit: BoxFit.cover,
+                                    /* headers: const {
+                                    "User-Agent":
+                                        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+                                  }, */
+                                  ),
                                 ),
-                              )
-                            ],
+                                Container(
+                                  height: 75,
+                                  width: 150,
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 10),
+                                  child: Text(
+                                    movie.title,
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                    maxLines: 3,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                )
+                              ],
+                            ),
                           );
                         },
                         separatorBuilder: (context, index) =>
